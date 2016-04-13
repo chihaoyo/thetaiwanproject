@@ -47,6 +47,7 @@ html, body, iframe {
 	height: 100%;
 }
 header, hgroup {
+	display: none;
 	position: absolute;
 	padding: 1em;
 	background: white;
@@ -63,4 +64,9 @@ hgroup {
 	top: 0;
 	left: 0;
 	width: 15em;
+}
+html.jf-active, html.jf-inactive {
+	header, hgroup {
+		display: block;
+	}
 }
