@@ -4,7 +4,7 @@
 div {
   position: relative; }
 
-body, h1, h2, input, textarea {
+body, h1, h2, p, input, textarea {
   font-family: "Source Serif Pro", serif;
   font-size: 16px;
   font-weight: normal;
@@ -29,9 +29,8 @@ p {
   vertical-align: baseline; }
   p.withIcon > * {
     vertical-align: middle; }
-  p.legal {
-    font-size: 13px;
-    color: gray; }
+  p.legal, p.solidarity {
+    font-size: 13px; }
 
 input, textarea {
   display: block;

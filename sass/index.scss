@@ -4,7 +4,7 @@
 div {
 	position: relative;
 }
-body, h1, h2, input, textarea {
+body, h1, h2, p, input, textarea {
 	font-family: "Source Serif Pro", serif;
 	font-size: 16px;
 	font-weight: normal;
@@ -31,9 +31,8 @@ p {
 	&.withIcon > * {
 		vertical-align: middle;
 	}
-	&.legal {
+	&.legal, &.solidarity {
 		font-size: 13px;
-		color: gray;
 	}
 }
 input, textarea {
