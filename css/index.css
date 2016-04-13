@@ -22,7 +22,7 @@ h1 {
   margin: 0; }
 
 p {
-  margin: 0.5em;
+  margin: 0.5em 0;
   vertical-align: baseline; }
   p.withIcon > * {
     vertical-align: middle; }
