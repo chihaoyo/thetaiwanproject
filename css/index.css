@@ -4,7 +4,7 @@
 div {
   position: relative; }
 
-body, h1, input, textarea {
+body, h1, h2, input, textarea {
   font-family: "Source Serif Pro", serif;
   font-size: 16px;
   font-weight: normal;
@@ -18,8 +18,11 @@ a {
   a:hover {
     color: red; }
 
-h1 {
-  margin: 0; }
+h1, h2 {
+  margin: 0.5em 0; }
+
+h2 {
+  font-size: 13px; }
 
 p {
   margin: 0.5em 0;
@@ -27,7 +30,7 @@ p {
   p.withIcon > * {
     vertical-align: middle; }
   p.legal {
-    font-size: 0.75em;
+    font-size: 13px;
     color: gray; }
 
 input, textarea {
@@ -41,7 +44,7 @@ html, body, iframe {
   width: 100%;
   height: 100%; }
 
-header, h1 {
+header, hgroup {
   position: absolute;
   padding: 1em;
   background: white;
@@ -54,9 +57,9 @@ header {
   right: 0;
   width: 20em; }
 
-h1 {
+hgroup {
   top: 0;
   left: 0;
-  width: 16em; }
+  width: 15em; }
 
 /*# sourceMappingURL=index.css.map */
