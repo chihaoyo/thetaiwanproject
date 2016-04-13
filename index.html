@@ -25,16 +25,8 @@
 	<header>
 		<p class="withIcon"><img src="images/favicon-32.png" /><span lang="zh-tw">台灣計畫——</span><span>The Taiwan Project</span></p>
 		<p class="solidarity">
-			<span lang="zh-tw">與太陽花運動、雨傘運動、圖博、東突厥斯坦獨立運動、Rojava、蘇格蘭獨立運動、加泰隆尼亞計畫協力，為世界各地人民的前途自決權努力。——</span>
-			<span>In solidarity with
-				the <a href="https://en.wikipedia.org/wiki/Sunflower_Student_Movement" target="_new">Sunflower Movement</a>,
-				the <a href="https://en.wikipedia.org/wiki/Umbrella_Movement" target="_new">Umbrella Movement</a>,
-				the <a href="https://en.wikipedia.org/wiki/Tibetan_independence_movement" target="_new">Tibetan</a>,
-				<a href="https://en.wikipedia.org/wiki/East_Turkestan_independence_movement" target="_new">East Turkestan independence movement</a>,
-				<a href="https://en.wikipedia.org/wiki/Rojava" target="_new">Rojava</a>,
-				the endeavors of <a href="http://en.wikipedia.org/wiki/Scottish_independence_referendum,_2014" target="_new">Scottish Independence</a>,
-				the <a href="http://thecatalanproject.org/" target="_new">Catalan Project</a>
-				and the will of the people to self-determination around the world.</span>
+			<span lang="zh-Hant-tw">與</span><span lange="zh-Hant-tw" id="movements-tw"></span><span lang="zh-Hant-tw">協力，為世界各地人民的前途自決權努力。——</span>
+			<span>In solidarity with </span><span id="movements-en"></span><span>, and the will of the people to self-determination around the world.</span>
 		</p>
 		<p class="legal"><span lang="zh-tw">計畫內容依</span><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_new"><span lang="zh-tw">創用</span>CC BY-NC-SA 4.0<span lang="zh-tw">國際授權條款</span></a><span lang="zh-tw">授權釋出——</span><span>Content of this project is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 International License</a>.</span></p>
 	</header>
@@ -45,3 +37,29 @@
 </body>
 </html>
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script>
+
+var movements = [
+	{tw: '太陽花運動', en: 'Sunflower Movement', url: 'https://en.wikipedia.org/wiki/Sunflower_Student_Movement'},
+	{tw: '雨傘運動', en: 'Umbrella Movement', url: 'https://en.wikipedia.org/wiki/Umbrella_Movement'},
+	{tw: '圖博獨立運動', en: 'Tibetan independence movement', url: 'https://en.wikipedia.org/wiki/Tibetan_independence_movement'},
+	{tw: '東突厥斯坦獨立運動', en: 'East Turkestan independence movement', url: 'https://en.wikipedia.org/wiki/East_Turkestan_independence_movement'},
+	{tw: 'Rojava', en: 'Rojava', url: 'https://en.wikipedia.org/wiki/Rojava'},
+	{tw: '蘇格蘭獨立運動', en: 'Scottish independence movement', url: 'http://en.wikipedia.org/wiki/Scottish_independence_referendum,_2014'},
+	{tw: '加泰隆尼亞計畫', en: 'Catalan Project', url: 'http://thecatalanproject.org/'},
+];
+$(function() {
+	let $tw = $('#movements-tw');
+	let $en = $('#movements-en');
+	for(let i = 0; i < movements.length; i++) {
+		var m = movements[i];
+		$('<a>').attr('href', m.url).html(m.tw).appendTo($tw);
+		$('<a>').attr('href', m.url).html(m.en).appendTo($en);
+		if(i < movements.length - 1) {
+			$('<span>、</span>').appendTo($tw);
+			$('<span>, </span>').appendTo($en);
+		}
+	}
+});
+
+</script>
